@@ -1,0 +1,22 @@
+http://localhost:9090
+
+1.get history: 
+http://localhost:9090/history
+
+2.Get particular form by id(na przykład 0): 
+http://localhost:9090/forms/0
+
+3.Process and add new request(ale do tego mamy html): 
+http://localhost:9090/process-form
+
+4.Replace form by id(na przykład 0): 
+http://localhost:9090/replace-form/0
+
+{
+  "sourceCurrency": "USD",
+  "targetCurrency": "EUR",
+  "amount": 250.99
+}
+
+5.Delete form with particular id(na przykład 0): 
+http://localhost:9090/remove-form/0

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Historia zapytań</title>
+</head>
+<body>
+<h1>Historia zapytań</h1>
+<table border="1">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Waluta źródłowa</th>
+        <th>Waluta docelowa</th>
+        <th>Kwota</th>
+        <th>Kurs</th>
+        <th>Wynik</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="entry : ${history}">
+        <td th:text="${entry.key}"></td>
+        <td th:text="${entry.value.form.sourceCurrency}"></td>
+        <td th:text="${entry.value.form.targetCurrency}"></td>
+        <td th:text="${entry.value.form.amount}"></td>
+        <td th:text="${entry.value.response.exchangeRate}"></td>
+        <td th:text="${entry.value.response.calculationResult}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

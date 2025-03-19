@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Wynik przeliczenia</title>
+</head>
+<body>
+<h1>Wynik przeliczenia</h1>
+
+<p>Kurs: <strong th:text="${response.exchangeRate}"></strong></p>
+<p>Wynik: <strong th:text="${response.calculationResult}"></strong></p>
+
+</body>
+</html>

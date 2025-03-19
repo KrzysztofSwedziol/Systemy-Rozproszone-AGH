@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Porównywarka kursów walut</title>
+</head>
+<body>
+
+<h1>Porównywarka kursów walut</h1>
+<div class="subtitle">
+    <p>Wpisz, jaką walutę posiadasz, na jaką chcesz wymienić oraz kwotę, aby uzyskać prognozowany kurs i wynik.</p>
+</div>
+
+<div class="form-container">
+    <form action="/process-form" method="post">
+
+        <label>Waluta źródłowa (posiadana):
+            <select name="sourceCurrency" required>
+                <option value="">--Wybierz walutę--</option>
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="PLN">PLN</option>
+                <option value="GBP">GBP</option>
+            </select>
+        </label>
+
+        <label>Waluta docelowa (chciana):
+            <select name="targetCurrency" required>
+                <option value="">--Wybierz walutę--</option>
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="PLN">PLN</option>
+                <option value="GBP">GBP</option>
+            </select>
+        </label>
+
+        <label>Kwota waluty źródłowej:
+            <input type="number" name="amount" step="0.01" min="0" required placeholder="np. 100.00" />
+        </label>
+
+        <button type="submit">Przelicz i porównaj kursy</button>
+    </form>
+    <div class="info">
+        <p>W wynikach zobaczysz kurs z kilku źródeł oraz wyliczoną kwotę docelową.</p>
+    </div>
+</div>
+</body>
+</html>

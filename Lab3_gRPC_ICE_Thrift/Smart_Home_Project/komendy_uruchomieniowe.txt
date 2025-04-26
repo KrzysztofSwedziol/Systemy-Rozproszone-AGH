@@ -1,0 +1,6 @@
+główny server : 
+./gradlew run
+server z kamerami : 
+./gradlew runCameraServer
+klient : 
+python client.py
